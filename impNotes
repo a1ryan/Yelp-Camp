@@ -1,0 +1,6 @@
+correct syntax to include header and footer
+- the one shown in the video is not working
+- correct one is
+
+<%- include('partials/header'); -%>
+<%- include('partials/footer'); -%>
