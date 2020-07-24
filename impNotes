@@ -4,3 +4,6 @@ correct syntax to include header and footer
 
 <%- include('partials/header'); -%>
 <%- include('partials/footer'); -%>
+
+to adjust images inside the grid use <img style="width:100%">
+    this will put the image using 100% space of the column
