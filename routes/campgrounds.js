@@ -5,6 +5,7 @@ var middleware = require("../middleware");
 
 router.get("/campgrounds",function(req,res){
     //get all campgrounds from DB
+    console.log(" ======= @ Campground Page ======");
     Campground.find({}, function(err,allCampgrounds){
         if(err) console.log(err);
         else res.render("campground/index",{campgrounds:allCampgrounds, currentUser: req.user});

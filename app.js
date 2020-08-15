@@ -15,6 +15,7 @@ var cmpgRoutes = require("./routes/campgrounds"),
     commentRoutes = require("./routes/comments"),
     authRoutes = require("./routes/auth")
 
+const PORT = process.env.PORT || 3000;
 
 // mongoose.connect("mongodb://localhost/yelp_camp"); //creating a db for yelp camp on mongodb
 mongoose.connect("mongodb+srv://yelpCamp:aaryan4vedi@cluster0.8skuh.mongodb.net/yelpCamp?retryWrites=true&w=majority"); //creating a db for yelp camp on mongodb
@@ -52,6 +53,6 @@ app.use(cmpgRoutes);
 app.use(commentRoutes);
 app.use(authRoutes);
 
-app.listen(3000,function(){
-    console.log("\n =========== Started ============ \n");
-})
+app.listen(PORT, () => {
+    console.log(`\n =============== STARTED: on port ${ PORT } ==========\n`);
+});

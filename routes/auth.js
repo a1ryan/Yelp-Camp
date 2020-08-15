@@ -5,6 +5,7 @@ var User = require("../models/user");
 
 router.get("/",function(req,res){
     // res.send("ahfhsdhfjdhfj");
+    console.log(" ======= @ Home Page ======");
     res.render("homePage");
 });
 
