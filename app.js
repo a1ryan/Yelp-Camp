@@ -53,5 +53,5 @@ app.use(commentRoutes);
 app.use(authRoutes);
 
 app.listen(3000,function(){
-    console.log("Please don't wait");
+    console.log("\n =========== Started ============ \n");
 })
