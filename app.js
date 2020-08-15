@@ -16,7 +16,9 @@ var cmpgRoutes = require("./routes/campgrounds"),
     authRoutes = require("./routes/auth")
 
 
-mongoose.connect("mongodb://localhost/yelp_camp"); //creating a db for yelp camp on mongodb
+// mongoose.connect("mongodb://localhost/yelp_camp"); //creating a db for yelp camp on mongodb
+mongoose.connect("mongodb+srv://yelpCamp:aaryan4vedi@cluster0.8skuh.mongodb.net/yelpCamp?retryWrites=true&w=majority"); //creating a db for yelp camp on mongodb
+
 app.use(bodyParser.urlencoded({extended:true}));
 app.set("view engine","ejs");
 app.use(express.static(__dirname + "/public"))
