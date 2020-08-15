@@ -7,3 +7,5 @@ correct syntax to include header and footer
 
 to adjust images inside the grid use <img style="width:100%">
     this will put the image using 100% space of the column
+
+if you name your file as index.js than it will automatically require the index file in the code

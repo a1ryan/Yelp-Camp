@@ -1,11 +1,40 @@
-<%- include('./partials/header'); %> 
+<html>
+    <head>
+        <title>Login</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+        <link rel="stylesheet" href="/stylesheet/login.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js" type="text/javascript" async></script>
+    </head>
+    <body> 
+        <div class="container">
+            <% if(error && error.length > 0) { %> 
+                <div class="alert alert-danger" role="alert">
+                    <%= error %>
+                </div>
+            <% } %> 
+            <% if(success && success.length > 0) { %> 
+                <div class="alert alert-success" role="alert">
+                        <%= success %>
+                </div>
+            <% } %> 
+            </div>
 
-<h1>login here</h1>
+    <div class="container">
+        <h1  id="landing-header" style="text-align: center">Login</h1>
+        <div style="width: 30%; margin: 40px auto;">
+            <form action="/login" method="POST" autocomplete="off">
+                <div class="form-group">
+                    <input class="form-control" type="text" name="username" id="" placeholder="Enter your username" autocomplete="off">
+                </div>
+                <div class="form-group">
+                    <input class="form-control" type="password" name="password" id="" placeholder="password" autocomplete="off">
+                </div>
+                <div class="form-group">
+                    <button class="btn btn-lg btn-secondary btn-block">Login</button>
+                </div>
+            </form>
+            <a href="/register">New User?</a>
+        </div>
+    </div>
 
-<form action="/login" method="POST">
-    <input type="text" name="username" id="" placeholder="username" autocomplete="off">
-    <input type="password" name="password" id="" placeholder="password" autocomplete="off"> 
-    <button>Login</button>
-</form>
-
-<%- include('./partials/footer'); %> 
+<%- include('partials/footer'); %> 
